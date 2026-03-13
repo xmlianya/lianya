@@ -1,0 +1,8 @@
+# robots.txt for lianya.top
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# 站点地图地址
+Sitemap: https://www.lianya.top/sitemap.xml
