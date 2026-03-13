@@ -29,7 +29,7 @@ window.onload = function() {
                     "detect_on": "canvas",
                     "events": {
                         "onhover": { "enable": true, "mode": "repulse" },
-                        "onclick": { "enable": true, "mode": "push" },
+                        "onclick": { "enable: true, "mode": "push" },
                         "resize": true
                     }
                 },
@@ -76,16 +76,16 @@ window.onload = function() {
         }
     });
 
-    // ==================== 4. 表单提交处理 ====================
+    // ==================== 4. 表单提交处理 (简化版，由Formspree接管) ====================
     const consultForm = document.getElementById('consultForm');
     if (consultForm) {
         consultForm.addEventListener('submit', function(e) {
-            e.preventDefault();
             const name = this.querySelector('#name').value.trim();
             const phone = this.querySelector('#phone').value.trim();
             const message = this.querySelector('#message').value.trim();
 
             if (!name || !phone || !message) {
+                e.preventDefault(); // 阻止不完整表单的提交
                 alert('请填写所有带 * 的必填字段！');
                 return;
             }
@@ -95,12 +95,12 @@ window.onload = function() {
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 发送中...';
             submitBtn.disabled = true;
 
+            // 表单验证通过，浏览器会自动提交到Formspree。
+            // 设置一个超时，防止网络问题导致按钮一直禁用
             setTimeout(() => {
-                alert('咨询请求发送成功！\n\n感谢您的信任，我们的品牌顾问将在24小时内通过您留下的联系方式与您沟通。');
-                consultForm.reset();
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
-            }, 1500);
+            }, 8000); // 8秒后重置按钮状态
         });
     }
 
@@ -118,7 +118,7 @@ window.onload = function() {
         observer.observe(el);
     });
 
-    // ==================== 6. 更新页脚版权年份 (同步修改起始年份) ====================
+    // ==================== 6. 更新页脚版权年份 ====================
     document.getElementById('currentYear').textContent = new Date().getFullYear();
 
     // ==================== 执行初始化函数 ====================
