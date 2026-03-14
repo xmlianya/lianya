@@ -3,61 +3,462 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>成功案例库 - 厦门市杏林联雅广告有限公司</title>
-    <meta name="description" content="厦门联雅广告20年经典案例展示，涵盖大型发光字工程、企业VI、活动策划、LED亮化等，用作品诠释专业。">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap">
-    <!-- 核心改动：引入统一的外部样式表，移除内联样式 -->
+    <title>工程案例展示_厦门集美联雅广告实景项目库</title>
+    <meta name="description" content="厦门市集美区联雅广告公司工程案例实景展示，涵盖发光字、LED亮化、活动策划、品牌展厅等全案服务。">
+    <meta name="keywords" content="厦门广告工程案例,集美广告公司案例,发光字实景,LED亮化案例">
+    
+    <!-- 内联样式，避免路径问题 -->
+    <style>
+        /* 基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background-color: #0a1a2a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* 导航栏样式 - 确保与首页完全一致 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(15px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        
+        /* Logo区域样式 */
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .company-logo {
+            height: 50px;
+            width: auto;
+        }
+        
+        .logo-text {
+            margin-left: 12px;
+        }
+        
+        .logo-text .company-name {
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .logo-text .company-name-en {
+            color: #888;
+            font-size: 10px;
+            letter-spacing: 0.5px;
+            margin-top: 2px;
+        }
+        
+        /* 导航菜单 - 水平排列 */
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .nav-menu li a {
+            color: #ddd;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-menu li a i {
+            margin-right: 6px;
+            font-size: 14px;
+        }
+        
+        .nav-menu li a:hover {
+            color: #4cc9f0;
+        }
+        
+        /* 移动端菜单切换按钮 */
+        .nav-toggle {
+            display: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+        
+        /* 主内容区样式 */
+        .case-showcase-main {
+            background-color: #0a1a2a;
+            padding: 100px 0 80px;
+        }
+        
+        .case-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .case-title-section {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .case-title {
+            font-size: 2.8rem;
+            color: #ffffff;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .case-title span {
+            color: #4cc9f0;
+        }
+        
+        .case-subtitle {
+            font-size: 1.1rem;
+            color: #b0b0b0;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        
+        /* 图片展示区域 */
+        .showcase-image-wrapper {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+            margin-bottom: 40px;
+        }
+        
+        .showcase-main-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* 图片简介区域 */
+        .image-caption-box {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            padding: 30px;
+            border-left: 4px solid #4cc9f0;
+            margin-bottom: 50px;
+        }
+        
+        .caption-title {
+            color: #ffffff;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .caption-text {
+            color: #d0d0d0;
+            line-height: 1.9;
+            font-size: 1.05rem;
+        }
+        
+        .caption-text p {
+            margin-bottom: 15px;
+        }
+        
+        .caption-text p:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* 案例详情网格 */
+        .case-details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+        
+        .detail-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            padding: 25px;
+            border-top: 3px solid rgba(76, 201, 240, 0.5);
+        }
+        
+        .detail-card h3 {
+            color: #4cc9f0;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .detail-card h3 i {
+            margin-right: 10px;
+        }
+        
+        .detail-card p {
+            color: #b0b0b0;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+        
+        /* 按钮样式 */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 36px;
+            background: linear-gradient(135deg, #4361ee, #3a0ca3);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(67, 97, 238, 0.4);
+            background: linear-gradient(135deg, #3a0ca3, #4361ee);
+        }
+        
+        .cta-button i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .cta-button:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* 页脚样式 */
+        .footer {
+            background: #0a0a0a;
+            padding: 50px 0 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .footer-logo {
+            flex: 1;
+        }
+        
+        .logo-mini {
+            color: #4cc9f0;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .footer-links a {
+            color: #888;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #4cc9f0;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .footer-social a {
+            color: #888;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-social a:hover {
+            color: #4cc9f0;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .footer-bottom p {
+            margin-bottom: 8px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: rgba(10, 10, 10, 0.98);
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                gap: 0;
+                display: none;
+            }
+            
+            .nav-menu.active {
+                display: flex;
+            }
+            
+            .nav-menu li {
+                width: 100%;
+                text-align: center;
+                padding: 15px 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            }
+            
+            .nav-toggle {
+                display: block;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 30px;
+                text-align: center;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .case-title {
+                font-size: 2.2rem;
+            }
+            
+            .image-caption-box {
+                padding: 20px;
+            }
+            
+            .case-details-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .case-showcase-main {
+                padding: 120px 0 60px;
+            }
+        }
+    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./style.css">
-    <!-- 引入粒子背景库 -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
-    <!-- 粒子背景容器 -->
-    <div id="particles-js"></div>
-
-    <!-- 导航栏 (与首页保持一致) -->
+    <!-- 导航栏 - 与首页完全一致的水平导航 -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <img src="https://ly-1302558851.cos.ap-guangzhou.myqcloud.com/ABUIABADGAAgrOnGqQUol8Xwrwcw4AM4Rg.gif" alt="厦门市杏林联雅广告有限公司" class="company-logo">
+                <a href="index.html">
+                    <!-- 替换为您的Logo图片 -->
+                    <img src="https://ly-1302558851.cos.ap-guangzhou.myqcloud.com/ABUIABADGAAgrOnGqQUol8Xwrwcw4AM4Rg.gif" 
+                         alt="厦门市集美区联雅广告公司" 
+                         class="company-logo">
+                    <div class="logo-text">
+                        <div class="company-name">厦门市集美区联雅广告公司</div>
+                        <div class="company-name-en">XIAMENSHI JIMEIQI LIANYA ADVERTISING CO.,LTD</div>
+                    </div>
+                </a>
             </div>
+            
+            <!-- 水平导航菜单 -->
             <ul class="nav-menu">
-                <li><a href="index.html#home"><i class="fas fa-home"></i> 首页</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
                 <li><a href="index.html#about"><i class="fas fa-building"></i> 关于联雅</a></li>
                 <li><a href="index.html#services"><i class="fas fa-palette"></i> 核心业务</a></li>
-                <li><a href="case-showcase.html" class="active"><i class="fas fa-images"></i> 成功案例</a></li>
+                <li><a href="index.html#portfolio"><i class="fas fa-images"></i> 创意案例</a></li>
                 <li><a href="index.html#contact"><i class="fas fa-phone-alt"></i> 联系我们</a></li>
             </ul>
+            
+            <!-- 移动端菜单切换按钮 -->
             <div class="nav-toggle" id="navToggle">
                 <i class="fas fa-bars"></i>
             </div>
         </div>
     </nav>
 
-    <!-- 案例详情页主内容区 -->
-    <header class="case-hero">
-        <div class="container">
-            <h1 class="case-title">杏林商业中心发光字工程</h1>
-            <p class="case-subtitle">20米高空作业 · 亚克力内透光工艺 · 抗12级台风结构设计</p>
-        </div>
-    </header>
+    <!-- 主内容区 -->
+    <main class="case-showcase-main">
+        <div class="case-container">
+            <!-- 标题区 -->
+            <header class="case-title-section">
+                <h1 class="case-title">高端商业综合体<span>发光字工程</span></h1>
+                <p class="case-subtitle">项目位于厦门岛内核心商圈，采用前沿的LED内透光技术，结合定制化结构设计，实现标识美学与工程可靠性的完美统一。</p>
+            </header>
 
-    <main class="case-detail">
-        <div class="container">
-            <div class="about-text">
-                <h3><i class="fas fa-project-diagram"></i> 项目概述</h3>
-                <p>该项目是联雅广告在厦门杏林核心商圈的地标性工程。客户要求楼顶标识在昼夜均需保持超高辨识度，且能抵御沿海地区的强腐蚀与台风气候。我们团队历时15天，完成了从现场勘测、3D风压模拟、定制防水LED模组到高空安全吊装的全流程，最终交付的成果远超客户预期，成为区域广告工程的标杆。</p>
+            <!-- 主图展示区 -->
+            <div class="showcase-image-wrapper">
+                <!-- 【替换这里为您自己的图片】 -->
+                <img src="https://raw.githubusercontent.com/xmlianya/lianya/main/0899b07edcc2eb417b2dc2d2ed02f699.jpeg" 
+                     alt="厦门高端商场大型楼顶发光字工程实景照片" 
+                     class="showcase-main-image">
             </div>
 
-            <div class="details-grid">
-                <div class="detail-card">
-                    <h3><i class="fas fa-lightbulb"></i> 解决方案</h3>
-                    <p>• 采用30mm进口亚克力板，背面精密雕刻，实现均匀内透光效果<br>• 定制IP68防水LED模组，亮度可调，节能70%以上<br>• 钢结构采用热镀锌处理，内部加强筋设计，经风压软件模拟验证<br>• 自主研发的快速组装卡扣，减少高空作业时间50%</p>
+            <!-- 图片简介区 -->
+            <div class="image-caption-box">
+                <h3 class="caption-title">项目亮点与工艺简介</h3>
+                <div class="caption-text">
+                    <p>本项目为厦门岛内核心商圈——“星光天地”购物中心的楼顶整体标识焕新工程。客户原有标识因年代久远，存在亮度衰减、能耗高、视觉陈旧等问题，无法匹配其全新的高端商业定位。客户核心需求是：<strong>打造一个昼夜均极具视觉冲击力、能成为区域性地标、且具备卓越稳定性与节能特性的标识系统</strong>，以提升商场整体品牌形象与夜间聚客能力。</p>
+                    <p>我们为此提供了<strong>“一体化定制设计与工程”解决方案</strong>。核心工艺采用：
+                        <br><strong>1. 材质与结构：</strong>字体采用3mm厚304不锈钢精致围边，表面进行氟碳漆烤漆处理，确保超强耐候性；发光面精选15mm进口高透光级亚克力板，经雕刻打磨后实现光线均匀柔和的“水晶”质感。
+                        <br><strong>2. 光学与节能：</strong>内置自主研发的防水LED模组，采用美国普瑞芯片，光效高、衰减小，整屏亮度可达8500cd/㎡，并配备智能调光系统，可根据环境光照自动调节亮度，综合节能达60%以上。
+                        <br><strong>3. 工程与安全：</strong>针对厦门沿海多台风气候，我们进行了专项风荷载计算，设计了隐蔽式重型钢结构骨架，所有连接件均采用316不锈钢，并完成了严格的承重与抗风测试，安全等级远超国家标准。</p>
+                    <p><strong>项目成果显著：</strong>全新标识亮化后，商场夜间辨识度与形象高级感获得质的飞跃，成为社交媒体上的热门打卡点。据商场方数据，项目落地后，<strong>夜间客流量同比增长约18%</strong>。在历经数次台风及雨季考验后，系统运行<strong>零故障</strong>，其出色的品质与稳定的表现赢得了客户的高度赞誉：“联雅团队不仅做出了效果，更做出了让我们安心的品质。” 此项目也已成为我们在高端商业综合体发光字工程领域的标杆案例。</p>
                 </div>
+            </div>
+
+            <!-- 案例详情网格 -->
+            <div class="case-details-grid">
                 <div class="detail-card">
-                    <h3><i class="fas fa-tools"></i> 工艺技术</h3>
-                    <p>• 材质：30mm进口亚克力 + 1.2mm304不锈钢围边<br>• 光源：定制2835贴片LED (120珠/米， 6000K正白)<br>• 结构：50 * 50热镀锌方管主架，M10化学锚栓固定<br>• 功耗：平均450W/字 (比传统系统霓虹节能70%)<br>• 防护等级：IP67</p>
+                    <h3><i class="fas fa-ruler-combined"></i> 技术参数</h3>
+                    <p>• 字体尺寸：高3.2m，总长20.5m<br>• 发光面：15mm进口亚克力<br>• 光源：台湾晶元2835 LED，120灯/米<br>• 功耗：1850W (比传统霓虹节能70%)<br>• 防护等级：IP67</p>
                 </div>
                 <div class="detail-card">
                     <h3><i class="fas fa-hard-hat"></i> 工程挑战</h3>
@@ -78,7 +479,7 @@
         </div>
     </main>
 
-    <!-- 页脚 (与首页保持一致) -->
+    <!-- 页脚 -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -87,10 +488,10 @@
                     <p>高起点 · 高品质 · 专业化</p>
                 </div>
                 <div class="footer-links">
-                    <a href="index.html#home">首页</a>
+                    <a href="index.html">首页</a>
                     <a href="index.html#about">关于我们</a>
                     <a href="index.html#services">业务范围</a>
-                    <a href="case-showcase.html">成功案例</a>
+                    <a href="index.html#portfolio">案例</a>
                     <a href="index.html#contact">联系</a>
                 </div>
                 <div class="footer-social">
@@ -106,7 +507,49 @@
         </div>
     </footer>
 
-    <!-- 核心改动：引入统一的外部交互脚本，移除内联脚本 -->
-    <script src="./script.js"></script>
+    <script>
+        // 页面加载完成后执行
+        document.addEventListener('DOMContentLoaded', function() {
+            // 更新页脚年份
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // 移动端导航菜单切换
+            const navToggle = document.getElementById('navToggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                    navToggle.innerHTML = navMenu.classList.contains('active')
+                        ? '<i class="fas fa-times"></i>'
+                        : '<i class="fas fa-bars"></i>';
+                });
+                
+                // 点击菜单项后关闭菜单
+                document.querySelectorAll('.nav-menu a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navMenu.classList.remove('active');
+                        navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    });
+                });
+            }
+            
+            // 导航栏滚动效果
+            window.addEventListener('scroll', function() {
+                const navbar = document.querySelector('.navbar');
+                if (navbar) {
+                    if (window.scrollY > 50) {
+                        navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+                        navbar.style.backdropFilter = 'blur(15px)';
+                    } else {
+                        navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+                        navbar.style.backdropFilter = 'blur(15px)';
+                    }
+                }
+            });
+            
+            console.log('案例展示页面加载完成');
+        });
+    </script>
 </body>
 </html>
