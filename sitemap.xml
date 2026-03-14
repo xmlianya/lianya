@@ -5,8 +5,15 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://www.lianya.top/</loc>
-    <lastmod>2024-07-26</lastmod>
+    <lastmod>2024-09-20</lastmod> <!-- 已更新日期 -->
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <!-- 您可以添加更多页面，例如： -->
+  <url>
+    <loc>https://www.lianya.top/case-showcase.html</loc>
+    <lastmod>2024-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
