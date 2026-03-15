@@ -125,19 +125,3 @@ window.onload = function() {
     initParticles();
     console.log('网站脚本加载完成。');
 };
-
-// 为CSS滚动动画添加一个简单的类
-const style = document.createElement('style');
-style.textContent = `
-    .animate-in {
-        animation: fadeUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-    }
-    @keyframes fadeUp {
-        from { opacity: 0; transform: translateY(50px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-    .service-card, .portfolio-item, .about-text, .about-poster, .contact-info, .contact-form {
-        opacity: 0;
-    }
-`;
-document.head.appendChild(style);

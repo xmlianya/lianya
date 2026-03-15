@@ -22,7 +22,7 @@ body { font-family: 'Noto Sans SC', sans-serif; line-height: 1.6; color: #f0f0f0
     background-color: rgba(18, 18, 18, 0.95);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    z-index: 1000; /* 确保导航栏在最上层 */
+    z-index: 1000;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-container { 
@@ -97,9 +97,9 @@ body { font-family: 'Noto Sans SC', sans-serif; line-height: 1.6; color: #f0f0f0
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding-top: 100px; /* 为固定导航栏留出空间 */
+    padding-top: 100px;
     isolation: isolate;
-    margin-top: 0; /* 移除之前的margin-top，改用padding-top */
+    margin-top: 0;
 }
 .hero::before { 
     content: ''; 
@@ -437,7 +437,7 @@ body { font-family: 'Noto Sans SC', sans-serif; line-height: 1.6; color: #f0f0f0
 .submit-btn i { margin-left: 15px; transition: transform 0.4s ease; }
 .submit-btn:hover i { transform: translateX(8px); }
 
-/* 页脚样式 - 这是之前缺失的部分 */
+/* 页脚样式 */
 .footer { 
     background-color: #0a0a0a; 
     color: #888; 
