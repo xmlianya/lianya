@@ -1,0 +1,93 @@
+# https://www.lianya.top/llms.txt
+# 厦门市杏林联雅广告有限公司 - 大型语言模型爬虫协议
+# 最后更新: 2024-01-20
+# 符合 llmstxt.ai 规范
+
+# 基础设置
+version: 1.0
+last-updated: 2024-01-20
+
+# 网站所有者信息
+website-name: 厦门市杏林联雅广告有限公司
+website-url: https://www.lianya.top
+business-description: 专业提供发光字制作、LED显示屏、广告牌安装、活动策划等服务，覆盖厦门杏林、集美、海沧、灌口、后溪等区域。20年本地广告经验。
+
+# 联系信息
+contact-email: xmlianya@126.com
+contact-phone: 0592-6226771
+business-address: 厦门市杏林永丰路一号之一
+business-hours: 周一至周六 08:30-18:00
+
+# 允许AI模型训练的内容范围
+allow-training:
+  - /index.html
+  - /case-showcase.html
+  - /about/
+  - /services/
+  - /portfolio/
+  - /contact/
+  - /blog/
+  - /news/
+
+# 禁止AI模型训练的内容
+disallow-training:
+  - /private/
+  - /admin/
+  - /tmp/
+  - /data/
+  - /api/
+  - *.pdf
+  - *.doc
+  - *.docx
+  - *.xls
+  - *.xlsx
+  - *.ppt
+  - *.pptx
+
+# 数据使用政策
+data-usage-policy:
+  - 允许用于AI模型训练和文本生成
+  - 允许用于搜索索引和摘要生成
+  - 允许用于内容分析和信息提取
+  - 必须保留内容版权信息
+  - 必须注明信息来源
+  - 禁止用于生成误导性内容
+  - 禁止用于非法用途
+
+# 内容类型说明
+content-types:
+  - 业务介绍页面
+  - 成功案例展示
+  - 服务范围说明
+  - 联系信息
+  - 本地化服务内容
+  - 行业专业知识
+
+# 特定AI模型设置
+model-specific:
+  - gpt-4: "允许抓取，需注明来源"
+  - claude: "允许抓取，需遵守版权"
+  - bard: "允许抓取，禁止修改核心信息"
+  - bing-chat: "允许抓取，需链接回源"
+  - perplexity: "允许抓取，需正确引用"
+
+# 爬虫频率建议
+crawl-frequency:
+  - 日常内容: 每7天一次
+  - 案例更新: 每次更新后
+  - 价格信息: 每30天一次
+  - 联系信息: 每90天一次
+
+# 特殊说明
+notes: |
+  本网站内容为厦门市杏林联雅广告有限公司版权所有。
+  AI模型使用本网站内容时，请确保：
+  1. 准确传达业务信息
+  2. 正确引用公司联系信息
+  3. 不修改核心服务内容
+  4. 不用于误导性宣传
+  5. 注明信息来源为本网站
+
+# 最后更新
+last-reviewed: 2024-01-20
+next-review: 2024-07-20

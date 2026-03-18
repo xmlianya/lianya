@@ -6,3 +6,72 @@ Disallow: /private/
 
 # 站点地图地址
 Sitemap: https://www.lianya.top/sitemap.xml
+# https://www.lianya.top/robots.txt
+# 厦门市杏林联雅广告有限公司 - 网站爬虫协议
+# 最后更新: 2024-01-20
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /case-showcase.html
+Allow: /style.css
+Allow: /script.js
+Allow: /images/
+
+# 为特定AI爬虫提供额外指引
+User-agent: GPTBot
+Allow: /
+Disallow: /private/
+Crawl-delay: 2
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /admin/
+Crawl-delay: 1
+
+User-agent: CCBot
+Allow: /
+Disallow: /tmp/
+
+# 通用AI爬虫设置
+User-agent: ai
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /search/
+Disallow: /?s=
+Disallow: /*.pdf$
+Disallow: /*.doc$
+Disallow: /*.docx$
+Disallow: /*.xls$
+Disallow: /*.xlsx$
+Disallow: /*.ppt$
+Disallow: /*.pptx$
+
+# 抓取延迟设置（防止服务器过载）
+Crawl-delay: 1
+
+# 网站地图位置
+Sitemap: https://www.lianya.top/sitemap.xml
+Sitemap: https://www.lianya.top/sitemap_index.xml
+
+# 为百度爬虫额外设置
+User-agent: Baiduspider
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Crawl-delay: 2
+
+# 为谷歌爬虫设置
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Crawl-delay: 1
+
+# 联系信息（供搜索引擎参考）
+# 站长邮箱: xmlianya@126.com
+# 联系电话: 0592-6226771
