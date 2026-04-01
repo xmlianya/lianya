@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR全景与数字视觉案例_厦门联雅广告</title>
+    <meta name="description" content="厦门联雅广告VR全景与数字视觉技术应用案例。展示在大型基建、文化宣传等领域的专业解决方案，点击按钮即可体验完整高清VR全景。">
+    <meta name="keywords" content="VR全景案例,三维可视化,厦门广告公司,漳诏高速,智慧党建,全景体验">
+    
+    <style>
+        /* 基础样式 - 与网站完全一致 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif; background-color: #0a1a2a; color: #ffffff; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .navbar { position: fixed; top: 0; left: 0; right: 0; background: rgba(10, 10, 10, 0.95); backdrop-filter: blur(15px); z-index: 1000; border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; }
+        .logo a { text-decoration: none; display: flex; align-items: center; }
+        .company-logo { height: 50px; width: auto; }
+        .nav-menu { display: flex; list-style: none; gap: 30px; }
+        .nav-menu li a { color: #ddd; text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.3s ease; display: flex; align-items: center; }
+        .nav-menu li a i { margin-right: 6px; font-size: 14px; }
+        .nav-menu li a:hover { color: #4cc9f0; }
+        .nav-toggle { display: none; font-size: 24px; color: white; cursor: pointer; }
+        
+        /* 主内容区 */
+        .vr-showcase-main { background-color: #0a1a2a; padding: 100px 0 80px; }
+        .page-title-section { text-align: center; margin-bottom: 60px; }
+        .page-title { font-size: 2.8rem; color: #ffffff; margin-bottom: 15px; font-weight: 700; }
+        .page-title span { color: #4cc9f0; }
+        .page-subtitle { font-size: 1.1rem; color: #b0b0b0; max-width: 700px; margin: 0 auto; line-height: 1.7; }
+        
+        /* 案例展示卡 */
+        .vr-case-card { background: rgba(255, 255, 255, 0.03); border-radius: 15px; overflow: hidden; margin-bottom: 60px; border: 1px solid rgba(255, 255, 255, 0.05); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); }
+        .vr-case-header { padding: 40px 40px 20px; }
+        .vr-case-title { font-size: 1.8rem; color: #fff; margin-bottom: 10px; display: flex; align-items: center; }
+        .vr-case-title i { color: #4cc9f0; margin-right: 12px; font-size: 1.5rem; }
+        .vr-case-tag { display: inline-block; background: linear-gradient(135deg, #4cc9f0, #4361ee); color: white; padding: 6px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-left: 20px; }
+        .vr-case-desc { color: #aaa; line-height: 1.7; font-size: 1.05rem; margin-bottom: 30px; }
+        
+        /* 跳转按钮区域 - 核心 */
+        .vr-jump-section { text-align: center; padding: 40px; background: rgba(0, 0, 0, 0.2); border-radius: 10px; margin: 0 40px 40px; border: 2px dashed rgba(76, 201, 240, 0.3); }
+        .vr-jump-title { font-size: 1.4rem; color: #4cc9f0; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .vr-jump-desc { color: #aaa; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; font-size: 1rem; }
+        
+        /* 大按钮样式 */
+        .big-vr-button { display: inline-flex; align-items: center; justify-content: center; padding: 22px 50px; background: linear-gradient(135deg, #4cc9f0, #4361ee); color: white; text-decoration: none; border-radius: 50px; font-weight: 700; font-size: 1.3rem; transition: all 0.3s ease; border: none; box-shadow: 0 10px 25px rgba(76, 201, 240, 0.4); position: relative; overflow: hidden; }
+        .big-vr-button:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 15px 30px rgba(76, 201, 240, 0.6); background: linear-gradient(135deg, #4361ee, #4cc9f0); }
+        .big-vr-button i { margin-right: 12px; font-size: 1.5rem; transition: transform 0.3s ease; }
+        .big-vr-button:hover i { transform: rotate(15deg) scale(1.2); }
+        .big-vr-button::after { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.7s ease; }
+        .big-vr-button:hover::after { left: 100%; }
+        
+        /* 案例详情 */
+        .vr-case-details { padding: 30px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; background: rgba(0, 0, 0, 0.1); }
+        .detail-col h4 { color: #4cc9f0; font-size: 1.2rem; margin-bottom: 20px; display: flex; align-items: center; }
+        .detail-col h4 i { margin-right: 10px; }
+        .detail-col ul { list-style: none; }
+        .detail-col li { color: #b0b0b0; margin-bottom: 12px; padding-left: 24px; position: relative; line-height: 1.6; }
+        .detail-col li:before { content: "▸"; position: absolute; left: 0; color: #4cc9f0; }
+        
+        /* 提示框 */
+        .vr-tips { background: rgba(76, 201, 240, 0.1); border-left: 4px solid #4cc9f0; padding: 20px; border-radius: 8px; margin-top: 20px; }
+        .vr-tips p { color: #b0b0b0; margin: 0; font-size: 0.95rem; display: flex; align-items: flex-start; gap: 10px; }
+        .vr-tips i { color: #4cc9f0; margin-top: 3px; }
+        
+        /* 页脚 */
+        .footer { background: #0a0a0a; padding: 50px 0 20px; border-top: 1px solid rgba(255, 255, 255, 0.05); }
+        .footer-content { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+        .footer-logo { flex: 1; }
+        .logo-mini { color: #4cc9f0; font-size: 24px; font-weight: bold; margin-bottom: 5px; }
+        .footer-links { display: flex; gap: 30px; }
+        .footer-links a { color: #888; text-decoration: none; transition: color 0.3s ease; }
+        .footer-links a:hover { color: #4cc9f0; }
+        .footer-social { display: flex; gap: 20px; }
+        .footer-social a { color: #888; font-size: 20px; transition: color 0.3s ease; }
+        .footer-social a:hover { color: #4cc9f0; }
+        .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.05); color: #666; font-size: 14px; }
+        .footer-bottom p { margin-bottom: 8px; }
+        
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .nav-menu { position: fixed; top: 80px; left: 0; right: 0; background: rgba(10, 10, 10, 0.98); flex-direction: column; align-items: center; padding: 20px 0; gap: 0; display: none; }
+            .nav-menu.active { display: flex; }
+            .nav-menu li { width: 100%; text-align: center; padding: 15px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+            .nav-toggle { display: block; }
+            .vr-case-details { grid-template-columns: 1fr; gap: 30px; }
+            .vr-case-header, .vr-case-details, .vr-jump-section { padding: 25px; margin-left: 0; margin-right: 0; }
+            .vr-jump-section { margin: 0 0 25px 0; }
+            .vr-case-title { flex-direction: column; align-items: flex-start; }
+            .vr-case-tag { margin-left: 0; margin-top: 10px; }
+            .big-vr-button { padding: 20px 30px; font-size: 1.2rem; width: 100%; }
+            .footer-content { flex-direction: column; gap: 30px; text-align: center; }
+            .footer-links { flex-direction: column; gap: 15px; }
+            .page-title { font-size: 2.2rem; }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://raw.githubusercontent.com/xmlianya/lianya/main/ABUIABADGAAgrOnGqQUol8Xwrwcw4AM4Rg.gif" alt="厦门市杏林联雅广告有限公司" class="company-logo">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> 返回首页</a></li>
+                <li><a href="index.html#services"><i class="fas fa-palette"></i> 核心业务</a></li>
+                <li><a href="index.html#gifts"><i class="fas fa-gift"></i> 礼品供应链</a></li>
+                <li><a href="case-showcase.html"><i class="fas fa-images"></i> 成功案例</a></li>
+                <li><a href="book.html"><i class="fas fa-book"></i> 工具书</a></li>
+                <li><a href="index.html#contact"><i class="fas fa-phone-alt"></i> 联系我们</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容区 -->
+    <main class="vr-showcase-main">
+        <div class="container">
+            <!-- 页面标题 -->
+            <header class="page-title-section">
+                <h1 class="page-title">VR全景与<span>数字视觉</span>案例中心</h1>
+                <p class="page-subtitle">我们通过专业级的VR全景与三维可视化技术，为大型基建、文化宣传等项目打造沉浸式数字档案。点击下方按钮，即刻体验高清交互全景。</p>
+            </header>
+
+            <!-- 案例1: 中国交建·漳诏高速扩建 -->
+            <article class="vr-case-card">
+                <div class="vr-case-header">
+                    <h2 class="vr-case-title"><i class="fas fa-road"></i> 中国交建——漳诏高速扩建项目VR全景 <span class="vr-case-tag">大型基建/数字孪生</span></h2>
+                    <p class="vr-case-desc">本项目为福建省重点交通工程——漳诏高速公路扩建段。我们通过无人机全景采集与专业级后期缝合，制作了覆盖多个标段、互通立交及关键工点的<strong>8K高清交互式VR全景</strong>，为项目管理、成果汇报与远程巡检提供了沉浸式数字孪生平台。</p>
+                </div>
+                
+                <!-- 核心：大按钮跳转区 -->
+                <div class="vr-jump-section">
+                    <h3 class="vr-jump-title"><i class="fas fa-external-link-alt"></i> 体验完整VR全景</h3>
+                    <p class="vr-jump-desc">点击下方按钮，将在新窗口打开专业的全景展示平台。您可以通过鼠标拖拽、滚轮缩放或手机重力感应，720°无死角探索工程现场。</p>
+                    
+                    <a href="https://vr.douhuiai.com/v/hf4_3545386li3-1761872429.html" target="_blank" rel="noopener noreferrer" class="big-vr-button">
+                        <i class="fas fa-vr-cardboard"></i> 立即探索漳诏高速VR全景
+                    </a>
+                    
+                    <div class="vr-tips">
+                        <p><i class="fas fa-lightbulb"></i> <strong>最佳体验提示：</strong> 建议在电脑端使用Chrome/Edge浏览器，或在手机端通过微信/浏览器打开。全景加载可能需要数秒，请耐心等待。</p>
+                    </div>
+                </div>
+                
+                <div class="vr-case-details">
+                    <div class="detail-col">
+                        <h4><i class="fas fa-cogs"></i> 项目亮点与交付成果</h4>
+                        <ul>
+                            <li><strong>全景覆盖：</strong> 5个关键标段，20+全景节点，形成完整可视化工程链</li>
+                            <li><strong>超高精度：</strong> 8K级画质，细节清晰可见，支持放大查看工程标识与结构</li>
+                            <li><strong>交互导航：</strong> 内置热点跳转，可自由在互通立交、桥梁、路基等场景间穿梭</li>
+                            <li><strong>多端适配：</strong> 完美支持电脑、平板、手机及VR眼镜设备</li>
+                            <li><strong>数字资产：</strong> 全套全景图集、导航方案与工程标签数据</li>
+                        </ul>
+                    </div>
+                    <div class="detail-col">
+                        <h4><i class="fas fa-bullseye"></i> 解决的核心业务痛点</h4>
+                        <ul>
+                            <li><strong>安全巡检：</strong> 管理人员无需亲临高空、深坑等危险工点，通过VR即可完成360°无死角查验。</li>
+                            <li><strong>进度可视化：</strong> 每月更新，形成“工程进度时间轴”，业主可直观对比不同时期现场变化。</li>
+                            <li><strong>高效汇报：</strong> 在招商、评审会议中，VR沉浸式汇报替代传统PPT，大幅提升沟通效率与项目印象分。</li>
+                            <li><strong>数字档案：</strong> 项目结束后，全套VR全景作为永久数字档案，用于后期维护、改扩建与成果申报。</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 案例2: 厦门湖里实验学校党建展板墙 -->
+            <article class="vr-case-card">
+                <div class="vr-case-header">
+                    <h2 class="vr-case-title"><i class="fas fa-school"></i> 厦门湖里实验学校——智慧党建展馆VR全景 <span class="vr-case-tag">文化宣传/智慧党建</span></h2>
+                    <p class="vr-case-desc">为厦门湖里实验学校党建文化长廊打造的<strong>“云上党建展馆”</strong>。通过高保真全景拍摄与智能热点技术，将线下实体展板墙1:1复刻至线上，成为学校“智慧党建”的数字化标杆，实现党建成果的永久保存与跨地域、全天候分享。</p>
+                </div>
+                
+                <!-- 核心：大按钮跳转区 -->
+                <div class="vr-jump-section">
+                    <h3 class="vr-jump-title"><i class="fas fa-external-link-alt"></i> 体验智慧党建VR展馆</h3>
+                    <p class="vr-jump-desc">点击下方按钮，进入完整的线上VR党建展馆。可点击展板热点查看高清图文详情，体验自动导览功能，感受沉浸式党建学习。</p>
+                    
+                    <a href="https://vr.douhuiai.com/v/qw8e207casf9m6-1758270324.html" target="_blank" rel="noopener noreferrer" class="big-vr-button" style="background: linear-gradient(135deg, #f5576c, #f093fb); box-shadow: 0 10px 25px rgba(245, 87, 108, 0.4);">
+                        <i class="fas fa-university"></i> 立即参观党建VR展馆
+                    </a>
+                    
+                    <div class="vr-tips">
+                        <p><i class="fas fa-lightbulb"></i> <strong>使用场景：</strong> 本VR展馆已集成至学校官网与微信公众号，用于党员学习、思政课堂、家长开放日及上级检查，扫码即可“云参观”。</p>
+                    </div>
+                </div>
+                
+                <div class="vr-case-details">
+                    <div class="detail-col">
+                        <h4><i class="fas fa-cogs"></i> 项目亮点与交付成果</h4>
+                        <ul>
+                            <li><strong>1:1还原：</strong> 毫米级精度还原展厅布局、灯光与展板内容</li>
+                            <li><strong>智能热点：</strong> 点击展板弹出高清图文、视频解说，内容可后台随时更新</li>
+                            <li><strong>导览系统：</strong> 提供自动导览与自主探索两种模式，满足不同参观需求</li>
+                            <li><strong>多端入口：</strong> 生成专属二维码，印制于实体展厅，扫码即入“云展馆”</li>
+                            <li><strong>数据支持：</strong> 提供访问人次、停留时长、热点点击等数据看板</li>
+                        </ul>
+                    </div>
+                    <div class="detail-col">
+                        <h4><i class="fas fa-bullseye"></i> 解决的核心业务痛点</h4>
+                        <ul>
+                            <li><strong>突破时空限制：</strong> 师生、家长、校友可随时随地进行“云参观”，极大提高了党建教育的覆盖面和便捷性。</li>
+                            <li><strong>内容动态保鲜：</strong> 线上展馆内容可随时零成本更新，始终保持“新鲜度”，解决了实体展板更新慢、成本高的问题。</li>
+                            <li><strong>创新教学载体：</strong> 成为思政课、党课的生动互动教材，学生可通过探索、答题等互动功能完成学习，提升教育效果。</li>
+                            <li><strong>卓越展示窗口：</strong> 成为学校迎接各级检查、对外交流时的数字化亮点，有力彰显学校信息化与党建创新水平。</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 服务咨询入口 -->
+            <div style="text-align: center; margin-top: 40px; padding: 50px; background: rgba(255,255,255,0.03); border-radius: 15px; border: 1px solid rgba(76, 201, 240, 0.1);">
+                <h3 style="font-size:1.8rem; margin-bottom:20px; color:#fff;"><i class="fas fa-headset"></i> 为您的项目打造专业VR全景</h3>
+                <p style="color:#aaa; margin-bottom:30px; max-width:700px; margin-left:auto; margin-right:auto;">无论您是工程项目、企业展厅、文旅景区还是党建阵地，我们都能提供从策划、拍摄、制作到发布的一站式VR全景解决方案。您只需提供需求，剩下的交给我们。</p>
+                <a href="index.html#contact" class="big-vr-button" style="background: linear-gradient(135deg, #4cc9f0, #4361ee); font-size:1.2rem; padding:20px 50px;">
+                    立即咨询您的VR全景方案 <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-mini">联雅广告</div>
+                    <p>高起点 · 高品质 · 专业化</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">首页</a>
+                    <a href="index.html#services">核心业务</a>
+                    <a href="index.html#gifts">礼品供应链</a>
+                    <a href="case-showcase.html">成功案例</a>
+                    <a href="vr-showcase.html">VR案例</a>
+                    <a href="book.html">工具书</a>
+                    <a href="index.html#contact">联系我们</a>
+                </div>
+                <div class="footer-social">
+                    <a href="tencent://message/?uin=351921178&Site=&Menu=yes" title="QQ在线咨询"><i class="fab fa-qq"></i></a>
+                    <a href="javascript:void(0);" title="微信公众号"><i class="fab fa-weixin"></i></a>
+                    <a href="mailto:xmlianya@126.com" title="发送邮件"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2004-<span id="currentYear"></span> 厦门市杏林联雅广告有限公司 版权所有 闽ICP备20260318号</p>
+                <p>地址：厦门市杏林永丰路一号之一 电话：0592-6226771</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 更新年份
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // 移动端导航切换
+            const navToggle = document.getElementById('navToggle');
+            const navMenu = document.querySelector('.nav-menu');
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                    navToggle.innerHTML = navMenu.classList.contains('active') 
+                        ? '<i class="fas fa-times"></i>' 
+                        : '<i class="fas fa-bars"></i>';
+                });
+                
+                // 点击菜单项后关闭菜单
+                document.querySelectorAll('.nav-menu a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navMenu.classList.remove('active');
+                        navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

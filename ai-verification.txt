@@ -1,33 +1,30 @@
-# AI爬虫验证文件
-# https://www.lianya.top/ai-verification.txt
+# https://www.lianya.top/llms.txt
+# 厦门市杏林联雅广告有限公司 - 大型语言模型爬虫协议
+# 最后更新: 2024-09-20
+# 符合 llmstxt.ai 规范
 
-网站名称: 厦门市杏林联雅广告有限公司
-网站URL: https://www.lianya.top
-验证时间: 2024-01-20
+# 基础设置
+version: 1.0
+last-updated: 2024-09-20
 
-验证状态: ✅ 已配置AI友好设置
+# 网站所有者信息
+website-name: 厦门市杏林联雅广告有限公司
+website-url: https://www.lianya.top
+business-description: 专业提供发光字制作、LED显示屏、广告牌安装、活动策划等服务，覆盖厦门杏林、集美、海沧、灌口、后溪等区域。20年本地广告经验。
 
-已配置的文件:
-1. ✅ robots.txt - 已配置AI爬虫规则
-2. ✅ llms.txt - 已配置LLM专用规则
-3. ✅ Meta标签 - 已添加AI允许标签
-4. ✅ HTTP头 - 已配置AI权限头
+# 联系信息
+contact-email: xmlianya@126.com
+contact-phone: 0592-6226771
+business-address: 厦门市杏林永丰路一号之一
+business-hours: 周一至周六 08:30-18:00
 
-AI权限状态:
-- AI模型训练: ✅ 允许
-- AI内容索引: ✅ 允许
-- AI摘要生成: ✅ 允许
-- AI缓存使用: ✅ 允许
-
-限制说明:
-- 禁止抓取: /admin/, /private/, /tmp/
-- 允许抓取: 所有公开页面
-- 抓取频率: 建议每7天一次
-
-联系信息:
-- 邮箱: xmlianya@126.com
-- 电话: 0592-6226771
-- 地址: 厦门市杏林永丰路一号之一
-
-最后更新: 2024-01-20
-下次审核: 2024-07-20
+# 允许AI模型训练的内容范围
+allow-training:
+  - /index.html
+  - /case-showcase.html
+  - /book.html
+  - /about/
+  - /services/
+  - /portfolio/
+  - /contact/
+  - /blog/

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GN接单工具书2025_全品类广告礼品供应链指南-厦门联雅广告</title>
+    <meta name="description" content="《GN接单工具书2025》完整在线版。广告行业专业指南，涵盖全品类礼品供应链、标准化接单流程、报价策略与客户管理，助力广告人提升业绩。">
+    <meta name="keywords" content="广告工具书,接单指南,广告礼品供应链,GN工具书,广告行业知识,报价策略">
+    
+    <!-- 内联样式，确保与 case-showcase.html 风格 100% 一致 -->
+    <style>
+        /* 基础样式 - 完全复制自 case-showcase.html */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background-color: #0a1a2a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* 导航栏样式 - 与全站完全一致 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(15px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        
+        .logo a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .company-logo {
+            height: 50px;
+            width: auto;
+        }
+        
+        /* 导航菜单 - 水平排列，与首页同步更新 */
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .nav-menu li a {
+            color: #ddd;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-menu li a i {
+            margin-right: 6px;
+            font-size: 14px;
+        }
+        
+        .nav-menu li a:hover {
+            color: #4cc9f0;
+        }
+        
+        /* 移动端菜单切换按钮 */
+        .nav-toggle {
+            display: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+        
+        /* 主内容区样式 */
+        .book-showcase-main {
+            background-color: #0a1a2a;
+            padding: 100px 0 80px;
+        }
+        
+        .book-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .book-title-section {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .book-title {
+            font-size: 2.8rem;
+            color: #ffffff;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .book-title span {
+            color: #4cc9f0;
+        }
+        
+        .book-subtitle {
+            font-size: 1.1rem;
+            color: #b0b0b0;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        
+        /* 在线阅读器容器 */
+        .book-viewer-wrapper {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+            margin-bottom: 40px;
+            background: #000;
+            min-height: 650px;
+            position: relative;
+        }
+        
+        .book-iframe {
+            width: 100%;
+            height: 750px;
+            border: none;
+            display: block;
+        }
+        
+        /* 书籍简介区域 */
+        .book-intro-box {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            padding: 30px;
+            border-left: 4px solid #f5576c; /* 使用礼品供应链主题色 */
+            margin-bottom: 50px;
+        }
+        
+        .book-intro-title {
+            color: #ffffff;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .book-intro-text {
+            color: #d0d0d0;
+            line-height: 1.9;
+            font-size: 1.05rem;
+        }
+        
+        .book-intro-text p {
+            margin-bottom: 15px;
+        }
+        
+        /* 书籍详情网格 */
+        .book-details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+        
+        .book-detail-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            padding: 25px;
+            border-top: 3px solid rgba(245, 87, 108, 0.5); /* 使用礼品供应链主题色 */
+        }
+        
+        .book-detail-card h3 {
+            color: #f5576c; /* 使用礼品供应链主题色 */
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .book-detail-card h3 i {
+            margin-right: 10px;
+        }
+        
+        .book-detail-card p {
+            color: #b0b0b0;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+        
+        /* 按钮样式 (复用) */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 36px;
+            background: linear-gradient(135deg, #f5576c, #f093fb); /* 礼品供应链主题渐变色 */
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 5px 15px rgba(245, 87, 108, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(245, 87, 108, 0.4);
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+        }
+        
+        .cta-button i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .cta-button:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* 页脚样式 (与全站完全一致) */
+        .footer {
+            background: #0a0a0a;
+            padding: 50px 0 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .footer-logo {
+            flex: 1;
+        }
+        
+        .logo-mini {
+            color: #4cc9f0;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .footer-links a {
+            color: #888;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #4cc9f0;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .footer-social a {
+            color: #888;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-social a:hover {
+            color: #4cc9f0;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .footer-bottom p {
+            margin-bottom: 8px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: rgba(10, 10, 10, 0.98);
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                gap: 0;
+                display: none;
+            }
+            
+            .nav-menu.active {
+                display: flex;
+            }
+            
+            .nav-menu li {
+                width: 100%;
+                text-align: center;
+                padding: 15px 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            }
+            
+            .nav-toggle {
+                display: block;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 30px;
+                text-align: center;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .book-title {
+                font-size: 2.2rem;
+            }
+            
+            .book-intro-box {
+                padding: 20px;
+            }
+            
+            .book-details-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .book-showcase-main {
+                padding: 120px 0 60px;
+            }
+            
+            .book-viewer-wrapper {
+                min-height: 500px;
+            }
+            
+            .book-iframe {
+                height: 500px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 - 与首页风格一致，更新了“成功案例”为“工具书” -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://raw.githubusercontent.com/xmlianya/lianya/main/ABUIABADGAAgrOnGqQUol8Xwrwcw4AM4Rg.gif" 
+                         alt="厦门市集美区联雅广告公司" 
+                         class="company-logo">
+                </a>
+            </div>
+            
+            <!-- 水平导航菜单 -->
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> 返回首页</a></li>
+                <li><a href="index.html#services"><i class="fas fa-palette"></i> 核心业务</a></li>
+                <li><a href="index.html#portfolio"><i class="fas fa-images"></i> 创意案例</a></li>
+                <li><a href="index.html#contact"><i class="fas fa-phone-alt"></i> 联系我们</a></li>
+            </ul>
+            
+            <!-- 移动端菜单切换按钮 -->
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容区 -->
+    <main class="book-showcase-main">
+        <div class="book-container">
+            <!-- 标题区 -->
+            <header class="book-title-section">
+                <h1 class="book-title">GN接单工具书<span> 2025</span></h1>
+                <p class="book-subtitle">广告行业权威指南，一站式解决全品类礼品供应链、标准化接单流程、专业报价与客户管理，赋能广告人实现业绩突破。</p>
+            </header>
+
+            <!-- 在线阅读器 -->
+            <div class="book-viewer-wrapper">
+                <iframe src="https://www.111121.com.cn/bookView.asp?id=2819075723" 
+                        title="GN接单工具书2025在线预览" 
+                        class="book-iframe"
+                        allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- 工具书简介区 -->
+            <div class="book-intro-box">
+                <h3 class="book-intro-title">工具书核心价值与内容亮点</h3>
+                <div class="book-intro-text">
+                    <p>《GN接单工具书2025》是专为广告行业从业者打造的实战型年度指南。面对日益复杂的市场环境与客户需求，本书系统性地梳理了从潜在客户挖掘、需求对接到项目交付、关系维护的全流程标准化动作，并首次深度整合了<strong>全品类广告礼品供应链</strong>的解决方案，旨在帮助广告人构建专业、高效、可持续的业务增长体系。</p>
+                    <p>本书核心模块涵盖：
+                        <br><strong>1. 全链路接单标准化：</strong> 提供从首次电话沟通、现场勘查、方案呈现、报价策略到合同签订的标准化流程、专业话术与文件模板，大幅降低新人上手难度，提升成单率。
+                        <br><strong>2. 全品类礼品供应链实战：</strong> 详解广告促销礼品的选品逻辑、成本构成、供应商管理与创新应用方案，提供从几元到上千元预算的完整礼品库参考，帮助您将礼品从“成本项”转化为“增值项”与“利润点”。
+                        <br><strong>3. 专业报价与利润模型：</strong> 公开发光字、LED显示屏、活动策划等主流广告服务的精细化成本核算方法与市场报价区间，并提供不同竞争策略下的利润模型，让报价心中有数，谈判有据可依。
+                        <br><strong>4. 客户关系深度管理：</strong> 超越一次性交易，提供客户分类管理、定期维护、增值服务设计与转介绍激励机制，帮助您将客户转化为长期合作伙伴与业务推荐人。</p>
+                    <p><strong>为什么这本工具书至关重要？</strong> 在信息过载的时代，系统化、结构化的专业知识是最高效的竞争力。本书将所有分散的经验、数据、模板整合为一体，等于为您配备了一位24小时在线的“资深业务总监”。无论是独立广告人、小型工作室还是成长中的广告公司，都能从中获得即学即用、立竿见影的实战价值，实现从“凭感觉做事”到“凭系统赢单”的专业化升级。</p>
+                </div>
+            </div>
+
+            <!-- 工具书详情网格 -->
+            <div class="book-details-grid">
+                <div class="book-detail-card">
+                    <h3><i class="fas fa-sitemap"></i> 核心解决痛点</h3>
+                    <p>• 接单流程混乱，效率低下<br>• 礼品选品难，供应链不稳定<br>• 报价凭感觉，利润不清晰<br>• 客户合作一次性，难以留存<br>• 新人培养周期长，成本高</p>
+                </div>
+                <div class="book-detail-card">
+                    <h3><i class="fas fa-gift"></i> 供应链特色</h3>
+                    <p>• 覆盖12大礼品品类，300+优选单品<br>• 提供一件代发与定制化服务方案<br>• 整合厂家资源，价格竞争力强<br>• 附季度选品趋势与爆品预测</p>
+                </div>
+                <div class="book-detail-card">
+                    <h3><i class="fas fa-chart-line"></i> 应用价值</h3>
+                    <p>• 缩短新人成单周期至1个月内<br>• 平均客单价预计提升15-30%<br>• 客户回购率与转介绍率倍增<br>• 构建可复制的标准化业务体系</p>
+                </div>
+            </div>
+
+            <!-- 行动号召 -->
+            <div style="text-align: center;">
+                <a href="index.html#contact" class="cta-button">
+                    获取您的业务优化方案 <i class="fas fa-arrow-right"></i>
+                </a>
+                <p style="margin-top: 20px; color: #888; font-size: 0.9rem;">
+                    提示：工具书内容会随市场与供应链变化定期更新，请以上方在线阅读器最新版为准。
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-mini">联雅广告</div>
+                    <p>高起点 · 高品质 · 专业化</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">首页</a>
+                    <a href="index.html#services">核心业务</a>
+                    <a href="case-showcase.html">成功案例</a>
+                    <a href="index.html#contact">联系我们</a>
+                </div>
+                <div class="footer-social">
+                    <a href="tencent://message/?uin=351921178&Site=&Menu=yes" title="QQ在线咨询"><i class="fab fa-qq"></i></a>
+                    <a href="javascript:void(0);" title="微信公众号"><i class="fab fa-weixin"></i></a>
+                    <a href="mailto:xmlianya@126.com" title="发送邮件"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2004-<span id="currentYear"></span> 厦门市杏林联雅广告有限公司 版权所有 闽ICP备20260318号</p>
+                <p>地址：厦门市杏林永丰路一号之一 电话：0592-6226771</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 页面加载完成后执行
+        document.addEventListener('DOMContentLoaded', function() {
+            // 更新页脚年份
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // 移动端导航菜单切换
+            const navToggle = document.getElementById('navToggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                    navToggle.innerHTML = navMenu.classList.contains('active')
+                        ? '<i class="fas fa-times"></i>'
+                        : '<i class="fas fa-bars"></i>';
+                });
+                
+                // 点击菜单项后关闭菜单
+                document.querySelectorAll('.nav-menu a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navMenu.classList.remove('active');
+                        navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    });
+                });
+            }
+            
+            // 导航栏滚动效果
+            window.addEventListener('scroll', function() {
+                const navbar = document.querySelector('.navbar');
+                if (navbar) {
+                    if (window.scrollY > 50) {
+                        navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+                        navbar.style.backdropFilter = 'blur(15px)';
+                    } else {
+                        navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+                        navbar.style.backdropFilter = 'blur(15px)';
+                    }
+                }
+            });
+            
+            console.log('GN工具书页面加载完成');
+        });
+    </script>
+</body>
+</html>

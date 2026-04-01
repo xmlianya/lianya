@@ -1,19 +1,13 @@
-# robots.txt for lianya.top
-User-agent: *
-Allow: /
-Disallow: /admin/
-Disallow: /private/
-
-# 站点地图地址
-Sitemap: https://www.lianya.top/sitemap.xml
 # https://www.lianya.top/robots.txt
 # 厦门市杏林联雅广告有限公司 - 网站爬虫协议
-# 最后更新: 2024-01-20
+# 最后更新: 2024-09-20
 
 User-agent: *
 Allow: /
 Allow: /index.html
 Allow: /case-showcase.html
+Allow: /book.html
+Allow: /vr-showcase.html
 Allow: /style.css
 Allow: /script.js
 Allow: /images/

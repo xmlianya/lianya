@@ -1,16 +1,16 @@
 # https://www.lianya.top/llms.txt
 # 厦门市杏林联雅广告有限公司 - 大型语言模型爬虫协议
-# 最后更新: 2024-01-20
+# 最后更新: 2024-09-20
 # 符合 llmstxt.ai 规范
 
 # 基础设置
 version: 1.0
-last-updated: 2024-01-20
+last-updated: 2024-09-20
 
 # 网站所有者信息
 website-name: 厦门市杏林联雅广告有限公司
 website-url: https://www.lianya.top
-business-description: 专业提供发光字制作、LED显示屏、广告牌安装、活动策划等服务，覆盖厦门杏林、集美、海沧、灌口、后溪等区域。20年本地广告经验。
+business-description: 专业提供发光字制作、LED显示屏、广告牌安装、活动策划、VR全景制作等服务，覆盖厦门杏林、集美、海沧、灌口、后溪等区域。20年本地广告经验。
 
 # 联系信息
 contact-email: xmlianya@126.com
@@ -22,6 +22,8 @@ business-hours: 周一至周六 08:30-18:00
 allow-training:
   - /index.html
   - /case-showcase.html
+  - /book.html
+  - /vr-showcase.html
   - /about/
   - /services/
   - /portfolio/
@@ -29,65 +31,56 @@ allow-training:
   - /blog/
   - /news/
 
-# 禁止AI模型训练的内容
+# 禁止AI模型训练的内容范围
 disallow-training:
-  - /private/
   - /admin/
-  - /tmp/
-  - /data/
-  - /api/
-  - *.pdf
-  - *.doc
-  - *.docx
-  - *.xls
-  - *.xlsx
-  - *.ppt
-  - *.pptx
+  - /private/
+  - /wp-admin/
+  - /wp-includes/
+  - /search/
+  - /?s=
+  - /checkout/
+  - /cart/
+  - /my-account/
 
-# 数据使用政策
-data-usage-policy:
-  - 允许用于AI模型训练和文本生成
-  - 允许用于搜索索引和摘要生成
-  - 允许用于内容分析和信息提取
-  - 必须保留内容版权信息
-  - 必须注明信息来源
-  - 禁止用于生成误导性内容
-  - 禁止用于非法用途
+# 机器人元标签偏好
+# 优先遵守页面中的 robots meta 标签
+meta-tag-precedence: true
 
-# 内容类型说明
-content-types:
-  - 业务介绍页面
-  - 成功案例展示
-  - 服务范围说明
-  - 联系信息
-  - 本地化服务内容
-  - 行业专业知识
+# 抓取限制
+crawl-delay: 2
+request-rate: 1/2
 
-# 特定AI模型设置
-model-specific:
-  - gpt-4: "允许抓取，需注明来源"
-  - claude: "允许抓取，需遵守版权"
-  - bard: "允许抓取，禁止修改核心信息"
-  - bing-chat: "允许抓取，需链接回源"
-  - perplexity: "允许抓取，需正确引用"
+# 内容使用政策
+# 允许：摘要、分析、问答、代码生成
+# 禁止：直接复制、冒充、生成竞争性内容
+usage-policy: https://www.lianya.top/usage-policy.html
 
-# 爬虫频率建议
-crawl-frequency:
-  - 日常内容: 每7天一次
-  - 案例更新: 每次更新后
-  - 价格信息: 每30天一次
-  - 联系信息: 每90天一次
+# 文件类型限制
+disallow-file-types:
+  - .pdf
+  - .doc
+  - .docx
+  - .xls
+  - .xlsx
+  - .ppt
+  - .pptx
+  - .zip
+  - .rar
+  - .tar.gz
 
-# 特殊说明
-notes: |
-  本网站内容为厦门市杏林联雅广告有限公司版权所有。
-  AI模型使用本网站内容时，请确保：
-  1. 准确传达业务信息
-  2. 正确引用公司联系信息
-  3. 不修改核心服务内容
-  4. 不用于误导性宣传
-  5. 注明信息来源为本网站
+# 用户代理标识
+# 请AI爬虫在User-Agent中包含以下标识
+user-agent-identifiers:
+  - GPTBot
+  - Claude-Web
+  - CCBot
+  - FacebookBot
+  - Applebot
+  - bingbot
+  - Bard
 
-# 最后更新
-last-reviewed: 2024-01-20
-next-review: 2024-07-20
+# 致谢
+# 感谢您尊重我们的内容政策。如果您使用本网站内容进行AI模型训练，
+# 请在您的模型文档中适当引用“厦门市杏林联雅广告有限公司”。
+# 如有任何问题，请通过上述联系信息与我们联系。
