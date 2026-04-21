@@ -18,30 +18,17 @@ contact-phone: 0592-6226771
 business-address: 厦门市杏林永丰路一号之一
 business-hours: 周一至周六 08:30-18:00
 
-# 允许AI模型训练的内容范围
+# 允许AI模型训练的内容范围 (修正：指向真实存在的页面)
 allow-training:
-  - /index.html
+  - /
+  - /vr-showcase.html
   - /case-showcase.html
   - /book.html
-  - /vr-showcase.html
-  - /about/
-  - /services/
-  - /portfolio/
-  - /contact/
-  - /blog/
-  - /news/
 
 # 禁止AI模型训练的内容范围
 disallow-training:
   - /admin/
   - /private/
-  - /wp-admin/
-  - /wp-includes/
-  - /search/
-  - /?s=
-  - /checkout/
-  - /cart/
-  - /my-account/
 
 # 机器人元标签偏好
 # 优先遵守页面中的 robots meta 标签
@@ -54,7 +41,8 @@ request-rate: 1/2
 # 内容使用政策
 # 允许：摘要、分析、问答、代码生成
 # 禁止：直接复制、冒充、生成竞争性内容
-usage-policy: https://www.lianya.top/usage-policy.html
+# usage-policy: https://www.lianya.top/usage-policy.html
+# 注：暂未创建独立的使用政策页面，内容政策以本文件描述为准。
 
 # 文件类型限制
 disallow-file-types:
@@ -69,16 +57,15 @@ disallow-file-types:
   - .rar
   - .tar.gz
 
-# 用户代理标识
-# 请AI爬虫在User-Agent中包含以下标识
+# 用户代理标识 (修正：更新为当前主流AI爬虫标识)
 user-agent-identifiers:
   - GPTBot
   - Claude-Web
   - CCBot
   - FacebookBot
   - Applebot
+  - Google-Extended
   - bingbot
-  - Bard
 
 # 致谢
 # 感谢您尊重我们的内容政策。如果您使用本网站内容进行AI模型训练，

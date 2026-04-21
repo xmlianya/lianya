@@ -1,18 +1,65 @@
 # https://www.lianya.top/robots.txt
 # 厦门市杏林联雅广告有限公司 - 网站爬虫协议
 # 最后更新: 2024-09-20
+# 策略：在全面允许的基础上，侧重优化百度、360搜索的抓取体验。
 
+# === 1. 通用规则：允许所有搜索引擎爬虫（安全网）===
 User-agent: *
 Allow: /
-Allow: /index.html
-Allow: /case-showcase.html
-Allow: /book.html
-Allow: /vr-showcase.html
-Allow: /style.css
-Allow: /script.js
-Allow: /images/
+Disallow: /admin/
+Disallow: /private/
+# 通用抓取延迟，防止服务器压力
+Crawl-delay: 1
 
-# 为特定AI爬虫提供额外指引
+# === 2. 重点优化：中国大陆主流搜索引擎（侧重收录）===
+# 2.1 百度搜索 (Baiduspider) - 核心收录目标
+User-agent: Baiduspider
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+# 为百度设置更友好的抓取延迟，鼓励其深度抓取
+Crawl-delay: 2
+# 提示：请在百度搜索资源平台主动提交Sitemap与URL
+
+# 2.2 360搜索 (360Spider/360Spider-Image) - 核心收录目标
+User-agent: 360Spider
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Crawl-delay: 2
+
+User-agent: 360Spider-Image
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Crawl-delay: 2
+# 提示：请在360站长平台主动提交Sitemap与URL
+
+# 2.3 搜狗搜索 (Sogou Spider)
+User-agent: Sogou web spider
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Crawl-delay: 2
+
+# === 3. 国际主流搜索引擎（必须包含）===
+# 3.1 谷歌 (Googlebot)
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Crawl-delay: 1
+# 提示：请在Google Search Console主动提交Sitemap
+
+# 3.2 微软Bing (bingbot)
+User-agent: bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Crawl-delay: 1
+# 提示：请在Bing Webmaster Tools主动提交Sitemap
+
+# === 4. AI模型爬虫（遵循llms.txt，此处做基础允许）===
 User-agent: GPTBot
 Allow: /
 Disallow: /private/
@@ -27,45 +74,10 @@ User-agent: CCBot
 Allow: /
 Disallow: /tmp/
 
-# 通用AI爬虫设置
-User-agent: ai
-Allow: /
-Disallow: /api/
-Disallow: /admin/
-Disallow: /private/
-Disallow: /wp-admin/
-Disallow: /wp-includes/
-Disallow: /search/
-Disallow: /?s=
-Disallow: /*.pdf$
-Disallow: /*.doc$
-Disallow: /*.docx$
-Disallow: /*.xls$
-Disallow: /*.xlsx$
-Disallow: /*.ppt$
-Disallow: /*.pptx$
-
-# 抓取延迟设置（防止服务器过载）
-Crawl-delay: 1
-
-# 网站地图位置
+# === 5. 网站地图声明 (统一入口) ===
 Sitemap: https://www.lianya.top/sitemap.xml
-Sitemap: https://www.lianya.top/sitemap_index.xml
-
-# 为百度爬虫额外设置
-User-agent: Baiduspider
-Allow: /
-Disallow: /admin/
-Disallow: /private/
-Crawl-delay: 2
-
-# 为谷歌爬虫设置
-User-agent: Googlebot
-Allow: /
-Disallow: /admin/
-Disallow: /private/
-Crawl-delay: 1
 
 # 联系信息（供搜索引擎参考）
 # 站长邮箱: xmlianya@126.com
 # 联系电话: 0592-6226771
+# 网站名称: 厦门市杏林联雅广告有限公司
