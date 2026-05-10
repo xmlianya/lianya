@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>工程案例展示_厦门集美联雅广告实景项目库</title>
-    <meta name="description" content="厦门市集美区联雅广告公司工程案例实景展示，涵盖发光字、LED亮化、活动策划、品牌展厅等全案服务。">
-    <meta name="keywords" content="厦门广告工程案例,集美广告公司案例,发光字实景,LED亮化案例">
+    <title>广告工程案例库_厦门联雅广告全案实景展示</title>
+    <meta name="description" content="厦门联雅广告公司六大核心业务成功案例库：商业发光字、LED显示屏、夜景亮化、道路标识、会展工程、舞台音响等全案实景展示与工艺详解。">
+    <meta name="keywords" content="广告工程案例,发光字案例,LED显示屏案例,夜景亮化案例,道路牌工程,会展搭建案例,舞台音响工程">
     
-    <!-- 内联样式，避免路径问题 -->
     <style>
-        /* 基础样式 */
         * {
             margin: 0;
             padding: 0;
@@ -29,7 +27,6 @@
             padding: 0 20px;
         }
         
-        /* 导航栏样式 - 确保与首页完全一致 */
         .navbar {
             position: fixed;
             top: 0;
@@ -50,7 +47,6 @@
             padding: 15px 20px;
         }
         
-        /* Logo区域样式 */
         .logo {
             display: flex;
             align-items: center;
@@ -85,7 +81,6 @@
             margin-top: 2px;
         }
         
-        /* 导航菜单 - 水平排列 */
         .nav-menu {
             display: flex;
             list-style: none;
@@ -111,7 +106,6 @@
             color: #4cc9f0;
         }
         
-        /* 移动端菜单切换按钮 */
         .nav-toggle {
             display: none;
             font-size: 24px;
@@ -119,43 +113,91 @@
             cursor: pointer;
         }
         
-        /* 主内容区样式 */
-        .case-showcase-main {
+        /* 案例库主内容区 */
+        .cases-library-main {
             background-color: #0a1a2a;
             padding: 100px 0 80px;
         }
         
-        .case-container {
+        .library-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
         
-        .case-title-section {
+        .library-title-section {
             text-align: center;
             margin-bottom: 60px;
         }
         
-        .case-title {
+        .library-title {
             font-size: 2.8rem;
             color: #ffffff;
             margin-bottom: 15px;
             font-weight: 700;
         }
         
-        .case-title span {
+        .library-title span {
             color: #4cc9f0;
         }
         
-        .case-subtitle {
+        .library-subtitle {
             font-size: 1.1rem;
             color: #b0b0b0;
             max-width: 700px;
-            margin: 0 auto;
+            margin: 0 auto 30px;
             line-height: 1.7;
         }
         
-        /* 图片展示区域 */
+        /* 业务分类导航 */
+        .category-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+        
+        .category-btn {
+            padding: 10px 24px;
+            background: rgba(255, 255, 255, 0.05);
+            color: #b0b0b0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+        
+        .category-btn:hover,
+        .category-btn.active {
+            background: #4cc9f0;
+            color: #0a1a2a;
+            border-color: #4cc9f0;
+        }
+        
+        /* 案例板块通用样式 */
+        .case-section {
+            margin-bottom: 80px;
+            scroll-margin-top: 100px;
+        }
+        
+        .section-title {
+            font-size: 2.2rem;
+            color: #ffffff;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(76, 201, 240, 0.3);
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            color: #4cc9f0;
+            margin-right: 15px;
+            font-size: 1.8rem;
+        }
+        
         .showcase-image-wrapper {
             border-radius: 12px;
             overflow: hidden;
@@ -169,7 +211,6 @@
             display: block;
         }
         
-        /* 图片简介区域 */
         .image-caption-box {
             background: rgba(255, 255, 255, 0.03);
             border-radius: 10px;
@@ -195,16 +236,11 @@
             margin-bottom: 15px;
         }
         
-        .caption-text p:last-child {
-            margin-bottom: 0;
-        }
-        
-        /* 案例详情网格 */
         .case-details-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
         }
         
         .detail-card {
@@ -230,38 +266,6 @@
             color: #b0b0b0;
             line-height: 1.7;
             font-size: 0.95rem;
-        }
-        
-        /* 按钮样式 */
-        .cta-button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 16px 36px;
-            background: linear-gradient(135deg, #4361ee, #3a0ca3);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            border: none;
-            box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(67, 97, 238, 0.4);
-            background: linear-gradient(135deg, #3a0ca3, #4361ee);
-        }
-        
-        .cta-button i {
-            margin-left: 8px;
-            transition: transform 0.3s ease;
-        }
-        
-        .cta-button:hover i {
-            transform: translateX(5px);
         }
         
         /* 页脚样式 */
@@ -372,8 +376,12 @@
                 gap: 15px;
             }
             
-            .case-title {
+            .library-title {
                 font-size: 2.2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
             }
             
             .image-caption-box {
@@ -384,95 +392,277 @@
                 grid-template-columns: 1fr;
             }
             
-            .case-showcase-main {
+            .cases-library-main {
                 padding: 120px 0 60px;
+            }
+            
+            .category-nav {
+                gap: 10px;
+            }
+            
+            .category-btn {
+                padding: 8px 16px;
+                font-size: 0.85rem;
             }
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- 导航栏 - 与首页完全一致的水平导航 -->
+    <!-- 导航栏 -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
                 <a href="index.html">
-                    <!-- 替换为您的Logo图片 -->
                     <img src="https://raw.githubusercontent.com/xmlianya/lianya/main/ABUIABADGAAgrOnGqQUol8Xwrwcw4AM4Rg.gif" 
                          alt="厦门市集美区联雅广告公司" 
                          class="company-logo">
-                    <div class="logo-text">
-                      
-                    </div>
                 </a>
             </div>
             
-            <!-- 水平导航菜单 -->
             <ul class="nav-menu">
                 <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
                 <li><a href="index.html#about"><i class="fas fa-building"></i> 关于联雅</a></li>
                 <li><a href="index.html#services"><i class="fas fa-palette"></i> 核心业务</a></li>
-                <li><a href="index.html#portfolio"><i class="fas fa-images"></i> 创意案例</a></li>
+                <li><a href="case-showcase.html"><i class="fas fa-images"></i> 工程案例</a></li>
                 <li><a href="index.html#contact"><i class="fas fa-phone-alt"></i> 联系我们</a></li>
             </ul>
             
-            <!-- 移动端菜单切换按钮 -->
             <div class="nav-toggle" id="navToggle">
                 <i class="fas fa-bars"></i>
             </div>
         </div>
     </nav>
 
-    <!-- 主内容区 -->
-    <main class="case-showcase-main">
-        <div class="case-container">
+    <!-- 案例库主内容区 -->
+    <main class="cases-library-main">
+        <div class="library-container">
             <!-- 标题区 -->
-            <header class="case-title-section">
-                <h1 class="case-title">高端商业综合体<span>发光字工程</span></h1>
-                <p class="case-subtitle">项目位于厦门岛内核心商圈，采用前沿的LED内透光技术，结合定制化结构设计，实现标识美学与工程可靠性的完美统一。</p>
+            <header class="library-title-section">
+                <h1 class="library-title">广告工程<span>案例库</span></h1>
+                <p class="library-subtitle">汇聚厦门联雅广告十六年专业积淀，精选六大核心业务板块成功案例，从设计到施工全流程实景展示。</p>
+                
+                <!-- 业务分类导航 -->
+                <div class="category-nav" id="categoryNav">
+                    <button class="category-btn active" data-target="led-word">商业发光字</button>
+                    <button class="category-btn" data-target="led-screen">LED显示屏</button>
+                    <button class="category-btn" data-target="nightscape">夜景亮化</button>
+                    <button class="category-btn" data-target="road-sign">道路标识</button>
+                    <button class="category-btn" data-target="exhibition">会展工程</button>
+                    <button class="category-btn" data-target="stage-audio">舞台音响</button>
+                </div>
             </header>
 
-            <!-- 主图展示区 -->
-            <div class="showcase-image-wrapper">
-                <!-- 【替换这里为您自己的图片】 -->
-                <img src="https://raw.githubusercontent.com/xmlianya/lianya/main/0899b07edcc2eb417b2dc2d2ed02f699.jpeg" 
-                     alt="厦门高端商场大型楼顶发光字工程实景照片" 
-                     class="showcase-main-image">
-            </div>
+            <!-- 1. 商业发光字工程案例 -->
+            <section id="led-word" class="case-section">
+                <h2 class="section-title"><i class="fas fa-lightbulb"></i> 商业发光字工程</h2>
+                
+                <div class="showcase-image-wrapper">
+                    <img src="https://raw.githubusercontent.com/xmlianya/lianya/main/0899b07edcc2eb417b2dc2d2ed02f699.jpeg" 
+                         alt="厦门高端商场大型楼顶发光字工程实景照片" 
+                         class="showcase-main-image">
+                </div>
 
-            <!-- 图片简介区 -->
-            <div class="image-caption-box">
-                <h3 class="caption-title">项目亮点与工艺简介</h3>
-                <div class="caption-text">
-                    <p>本项目为厦门岛内核心商圈——“星光天地”购物中心的楼顶整体标识焕新工程。客户原有标识因年代久远，存在亮度衰减、能耗高、视觉陈旧等问题，无法匹配其全新的高端商业定位。客户核心需求是：<strong>打造一个昼夜均极具视觉冲击力、能成为区域性地标、且具备卓越稳定性与节能特性的标识系统</strong>，以提升商场整体品牌形象与夜间聚客能力。</p>
-                    <p>我们为此提供了<strong>“一体化定制设计与工程”解决方案</strong>。核心工艺采用：
-                        <br><strong>1. 材质与结构：</strong>字体采用3mm厚304不锈钢精致围边，表面进行氟碳漆烤漆处理，确保超强耐候性；发光面精选15mm进口高透光级亚克力板，经雕刻打磨后实现光线均匀柔和的“水晶”质感。
-                        <br><strong>2. 光学与节能：</strong>内置自主研发的防水LED模组，采用美国普瑞芯片，光效高、衰减小，整屏亮度可达8500cd/㎡，并配备智能调光系统，可根据环境光照自动调节亮度，综合节能达60%以上。
-                        <br><strong>3. 工程与安全：</strong>针对厦门沿海多台风气候，我们进行了专项风荷载计算，设计了隐蔽式重型钢结构骨架，所有连接件均采用316不锈钢，并完成了严格的承重与抗风测试，安全等级远超国家标准。</p>
-                    <p><strong>项目成果显著：</strong>全新标识亮化后，商场夜间辨识度与形象高级感获得质的飞跃，成为社交媒体上的热门打卡点。据商场方数据，项目落地后，<strong>夜间客流量同比增长约18%</strong>。在历经数次台风及雨季考验后，系统运行<strong>零故障</strong>，其出色的品质与稳定的表现赢得了客户的高度赞誉：“联雅团队不仅做出了效果，更做出了让我们安心的品质。” 此项目也已成为我们在高端商业综合体发光字工程领域的标杆案例。</p>
+                <div class="image-caption-box">
+                    <h3 class="caption-title">项目亮点与工艺简介</h3>
+                    <div class="caption-text">
+                        <p>本项目为厦门岛内核心商圈——"星光天地"购物中心的楼顶整体标识焕新工程。客户原有标识存在亮度衰减、能耗高、视觉陈旧等问题。我们提供了<strong>"一体化定制设计与工程"解决方案</strong>。</p>
+                        <p>核心工艺：字体采用3mm厚304不锈钢精致围边，表面氟碳漆烤漆处理；发光面精选15mm进口高透光级亚克力板；内置自主研发防水LED模组，配备智能调光系统，综合节能达60%以上。针对厦门沿海多台风气候，进行了专项风荷载计算，设计了隐蔽式重型钢结构骨架。</p>
+                        <p>项目成果显著：全新标识亮化后，商场夜间辨识度大幅提升，成为社交媒体热门打卡点。夜间客流量同比增长约18%，系统运行零故障。</p>
+                    </div>
                 </div>
-            </div>
 
-            <!-- 案例详情网格 -->
-            <div class="case-details-grid">
-                <div class="detail-card">
-                    <h3><i class="fas fa-ruler-combined"></i> 技术参数</h3>
-                    <p>• 字体尺寸：高3.2m，总长20.5m<br>• 发光面：15mm进口亚克力<br>• 光源：台湾晶元2835 LED，120灯/米<br>• 功耗：1850W (比传统霓虹节能70%)<br>• 防护等级：IP67</p>
+                <div class="case-details-grid">
+                    <div class="detail-card">
+                        <h3><i class="fas fa-ruler-combined"></i> 技术参数</h3>
+                        <p>• 字体尺寸：高3.2m，总长20.5m<br>• 发光面：15mm进口亚克力<br>• 光源：台湾晶元2835 LED，120灯/米<br>• 功耗：1850W (比传统霓虹节能70%)<br>• 防护等级：IP67</p>
+                    </div>
+                    <div class="detail-card">
+                        <h3><i class="fas fa-hard-hat"></i> 工程挑战</h3>
+                        <p>• 楼顶安装，吊装难度大<br>• 厦门沿海，抗风防腐蚀要求高<br>• 商业中心要求不停业施工<br>• 与幕墙单位交叉作业协调</p>
+                    </div>
+                    <div class="detail-card">
+                        <h3><i class="fas fa-award"></i> 项目成果</h3>
+                        <p>• 夜间辨识度提升300%<br>• 零故障稳定运行超18个月<br>• 荣获业主年度"最佳供应商"<br>• 成为区域广告标识新标杆</p>
+                    </div>
                 </div>
-                <div class="detail-card">
-                    <h3><i class="fas fa-hard-hat"></i> 工程挑战</h3>
-                    <p>• 楼顶安装，吊装难度大<br>• 厦门沿海，抗风防腐蚀要求高<br>• 商业中心要求不停业施工<br>• 与幕墙单位交叉作业协调</p>
+            </section>
+
+            <!-- 2. LED显示屏工程案例 -->
+            <section id="led-screen" class="case-section">
+                <h2 class="section-title"><i class="fas fa-tv"></i> LED显示屏工程</h2>
+                
+                <div class="showcase-image-wrapper">
+                    <img src="https://github.com/xmlianya/lianya/blob/main/P4%E6%88%B7%E5%A4%96%E5%85%A8%E5%BD%A9LED%E6%98%BE%E7%A4%BA%E5%B1%8F%E9%A1%B9%E7%9B%AE.png?raw=true" 
+                         class="showcase-main-image">
                 </div>
-                <div class="detail-card">
-                    <h3><i class="fas fa-award"></i> 项目成果</h3>
-                    <p>• 夜间辨识度提升300%<br>• 零故障稳定运行超18个月<br>• 荣获业主年度“最佳供应商”<br>• 成为区域广告标识新标杆</p>
+
+                <div class="image-caption-box">
+                    <h3 class="caption-title">P4户外全彩LED显示屏项目</h3>
+                    <div class="caption-text">
+                        <p>平面与弧形LED大屏项目，屏幕总面积186㎡，采用P4全彩表贴三合一LED。项目要求屏幕与建筑弧形外观完美融合，且在白天强光下依然保持高亮度、高对比度显示效果。</p>
+                        <p>技术特点：采用诺瓦控制系统，支持4K分辨率输入；模组采用压铸铝箱体，精度高、散热好；支持远程集群控制，可分区播放不同内容；配备亮度自动调节系统，根据环境光照自动调整(5000-8000cd/㎡)。</p>
+                        <p>此屏幕已成为重要信息发布平台。</p>
+                    </div>
                 </div>
-            </div>
+
+                <div class="case-details-grid">
+                    <div class="detail-card">
+                        <h3><i class="fas fa-microchip"></i> 显示技术</h3>
+                        <p>• 像素间距：P4<br>• 亮度：8000cd/㎡<br>• 刷新率：3840Hz<br>• 灰度：16bit<br>• 视角：水平160°/垂直140°</p>
+                    </div>
+                    <div class="detail-card">
+                        <h3><i class="fas fa-cogs"></i> 系统功能</h3>
+                        <p>• 支持4K/60Hz输入<br>• 7×24小时不间断运行<br>• 远程监控与故障报警<br>• 分区独立控制播放<br>• 亮度自动调节</p>
+                    </div>
+                    <div class="detail-card">
+                        <h3><i class="fas fa-chart-line"></i> 应用效果</h3>
+                        <p>• 重大活动保障率100%<br>• 年均无故障运行360天<br>• 节能模式省电40%<br>• 支持HDR视频源</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. 夜景亮化工程案例 -->
+            <section id="nightscape" class="case-section">
+                <h2 class="section-title"><i class="fas fa-city"></i> 夜景亮化工程</h2>
+                
+                <div class="showcase-image-wrapper">
+                    <img src="https://github.com/xmlianya/lianya/blob/main/%E5%A4%9C%E6%99%AF%E4%BA%AE%E5%8C%96%E5%B7%A5%E7%A8%8B.jpeg?raw=true" 
+                         alt="城市建筑夜景照明工程效果" 
+                         class="showcase-main-image">
+                </div>
+
+                <div class="image-caption-box">
+                    <h3 class="caption-title">高端写字楼建筑群夜景亮化</h3>
+                    <div class="caption-text">
+                        <p>本项目涵盖12栋高层建筑的夜景照明整体提升，总面积约28万平方米。采用"建筑为琴，光影为谱"的设计理念，通过智能控制系统让建筑群产生联动灯光效果。</p>
+                        <p>照明方案：采用3000K-4000K色温的LED投光灯表现建筑结构；建筑顶部采用RGBW线条灯营造天际线效果；设置平日、节日、深夜三种照明模式，通过DMX512智能控制系统统一控制。</p>
+                        <p>项目实现了年节能65%的目标，成为夜间旅游新地标，带动周边商业夜间营业额提升22%。</p>
+                    </div>
+                </div>
+
+                <div class="case-details-grid">
+                    <div class="detail-card">
+                        <h3><i class="fas fa-lightbulb"></i> 照明配置</h3>
+                        <p>• LED投光灯：8500套<br>• RGBW线条灯：25公里<br>• 控制系统：DMX512集中控制<br>• 总功率：285kW<br>• 色温：3000K-4000K可调</p>
+                    </div>
+                    <div class="detail-card">
+                        <h3><i class="fas fa-brain"></i> 智能控制</h3>
+                        <p>• 三模式自动切换<br>• GPS自动校时<br>• 故障自动检测<br>• 手机APP远程控制<br>• 能耗实时监测</p>
+                    </div>
+                    <div class="detail-card">
+                        <h3><i class="fas fa-leaf"></i> 节能成效</h3>
+                        <p>• 综合节能65%<br>• 年节电42万度<br>• 减少碳排放418吨<br>• 灯具寿命50000小时</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. 道路标识工程案例 -->
+            <section id="road-sign" class="case-section">
+                <h2 class="section-title"><i class="fas fa-road"></i> 道路标识工程</h2>
+                
+                <div class="showcase-image-wrapper">
+                    <img src="https://github.com/xmlianya/lianya/blob/main/%E9%81%93%E8%B7%AF%E6%A0%87%E8%AF%86%E5%B7%A5%E7%A8%8B%20.png?raw=true"城市交通道路标识系统" 
+                         class="showcase-main-image">
+                </div>
+
+                <div class="image-caption-box">
+                    <h3 class="caption-title">厦门城市快速路智能指路系统</h3>
+                    <div class="caption-text">
+                        <p>快速路网的智能指路标识系统，所有标志均采用V类反光膜，确保夜间辨识度。</p>
+                        <p>技术特色：关键节点设置LED可变信息标志，与交通指挥中心联网，实时显示路况、施工、天气信息；采用高强级反光膜，逆反射系数达500cd/lx·㎡；结构设计抗风等级达12级。</p>
+                        <p>系统投入使用后，快速路交通事故率下降18%，车辆平均通行效率提升25%，成为智慧城市建设的重要组成部分。</p>
+                    </div>
+                </div>
+
+                <div class="case-details-grid">
+                    <div class="detail-card">
+                        <h3><i class="fas fa-expand-alt"></i> 反光材料</h3>
+                        <p>• 反光膜等级：V类<br>• 逆反射系数：500cd/lx·㎡<br>• 使用寿命：10年<br>• 可视距离：300米<br>• 耐候温度：-40℃~+80℃</p>
+                    </div>
+                    <div class="detail-card">
+                        <h3><i class="fas fa-solar-panel"></i> 智能系统</h3>
+                        <p>• 可变信息标志：68套<br>• 与交通中心实时联网<br>• 自动亮度调节<br>• 远程内容更新<br>• 故障自检上报</p>
+                    </div>
+                    <div class="detail-card">
+                        <h3><i class="fas fa-shield-alt"></i> 安全标准</h3>
+                        <p>• 抗风等级：12级<br>• 防雷等级：二级<br>• 结构安全系数：2.5<br>• 防腐年限：15年<br>• 抗震设防：8度</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. 会展工程案例 -->
+            <section id="exhibition" class="case-section">
+                <h2 class="section-title"><i class="fas fa-gem"></i> 会展工程</h2>
+                
+                <div class="showcase-image-wrapper">
+                    <img src="https://github.com/xmlianya/lianya/blob/main/%E4%BC%9A%E5%B1%95%E5%B7%A5%E7%A8%8B.png?raw=true"国际展会特装展位设计与搭建" 
+                         class="showcase-main-image">
+                </div>
+
+                <div class="image-caption-box">
+                    <h3 class="caption-title">厦门国际投资贸易洽谈会主宾国展区</h3>
+                    <div class="caption-text">
+                        <p>为第23届厦洽会主宾国巴西设计搭建的360㎡特装展位，以"绿色能源、可持续发展"为主题，采用模块化、环保可重复使用的搭建材料。</p>
+                        <p>设计特色：主体结构采用铝合金型材系统，配以定制化的巴西文化元素装饰；顶部采用张拉膜结构，营造通透的空间感；设置多媒体互动区，通过触摸屏、VR设备展示巴西投资环境。</p>
+                        <p>展位在3天内完成搭建，材料回收利用率达85%，荣获厦洽会"最佳展位设计奖"，接待了包括省市领导、外国使节在内的2万余名参观者。</p>
+                    </div>
+                </div>
+
+                <div class="case-details-grid">
+                    <div class="detail-card">
+                        <h3><i class="fas fa-ruler"></i> 空间设计</h3>
+                        <p>• 展位面积：360㎡<br>• 净空高度：6m<br>• 主体结构：铝合金<br>• 装饰材料：环保板材<br>• 地面处理：pvc地胶</p>
+                    </div>
+                    <div class="detail-card">
+                        <h3><i class="fas fa-video"></i> 多媒体配置</h3>
+                        <p>• 150寸LED屏<br>• 4台触摸查询机<br>• VR体验设备<br>• 数字沙盘<br>• 智能灯光系统</p>
+                    </div>
+                    <div class="detail-card">
+                        <h3><i class="fas fa-recycle"></i> 环保指标</h3>
+                        <p>• 材料回收率：85%<br>• 搭建时间：3天<br>• 拆除时间：1天<br>• 重复使用：5次以上<br>• 废弃物：<5%</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. 舞台音响工程案例 -->
+            <section id="stage-audio" class="case-section">
+                <h2 class="section-title"><i class="fas fa-volume-up"></i> 舞台音响工程</h2>
+                
+                <div class="showcase-image-wrapper">
+                    <img src="https://github.com/xmlianya/lianya/blob/main/%E4%BC%9A%E5%B1%95%E5%A4%9A%E5%8A%9F%E8%83%BD%E5%8E%85%E9%9F%B3%E8%A7%86%E9%A2%91%E7%B3%BB%E7%BB%9F.png?raw=true"大型演出舞台音响灯光系统" 
+                         class="showcase-main-image">
+                </div>
+
+                <div class="image-caption-box">
+                    <h3 class="caption-title">厦门国际会展中心多功能厅音视频系统</h3>
+                    <div class="caption-text">
+                        <p>打造的专业级音视频系统，满足大型会议、文艺演出、产品发布会等多种用途。声学设计采用计算机模拟辅助，确保语言清晰度和音乐丰满度的完美平衡。</p>
+                        <p>音响系统：主扩声采用线阵列音箱，配合多点补声，实现全场声压级均匀度±3dB；配备数字调音台，支持128路输入；视频系统包含两台12000流明激光投影机，配合200英寸电动幕。</p>
+                        <p>系统成功保障了厦门国际海洋周、金鸡百花电影节等重大活动，语言清晰度STI达到0.65，音乐传输指数MTI达到0.85，远超国家标准。</p>
+                    </div>
+                </div>
+
+                <div class="case-details-grid">
+                    <div class="detail-card">
+                        <h3><i class="fas fa-wave-square"></i> 音响配置</h3>
+                        <p>• 主扩线阵：8+8<br>• 超低频：4×18"<br>• 数字调音台：128路<br>• 功率放大器：12台<br>• 系统延时：15ms</p>
+                    </div>
+                    <div class="detail-card">
+                        <h3><i class="fas fa-satellite-dish"></i> 音频指标</h3>
+                        <p>• 最大声压级：125dB<br>• 频率响应：40Hz-18kHz<br>• 语言清晰度STI：0.65<br>• 传声增益：-8dB<br>• 声场不均匀度：±3dB</p>
+                    </div>
+                    <div class="detail-card">
+                        <h3><i class="fas fa-tv"></i> 视频系统</h3>
+                        <p>• 激光投影机：12000流明<br>• 投影幕：200英寸<br>• 信号传输：HDBaseT<br>• 视频会议系统<br>• 录播系统</p>
+                    </div>
+                </div>
+            </section>
 
             <!-- 行动号召 -->
-            <div style="text-align: center;">
-                <a href="index.html#contact" class="cta-button">
-                    咨询您的定制方案 <i class="fas fa-arrow-right"></i>
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="index.html#contact" class="cta-button" style="display: inline-flex; align-items: center; justify-content: center; padding: 16px 36px; background: linear-gradient(135deg, #4361ee, #3a0ca3); color: white; text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; border: none; box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);">
+                    获取专属工程方案 <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
         </div>
@@ -490,7 +680,7 @@
                     <a href="index.html">首页</a>
                     <a href="index.html#about">关于我们</a>
                     <a href="index.html#services">业务范围</a>
-                    <a href="index.html#portfolio">案例</a>
+                    <a href="case-showcase.html">工程案例</a>
                     <a href="index.html#contact">联系</a>
                 </div>
                 <div class="footer-social">
@@ -507,7 +697,6 @@
     </footer>
 
     <script>
-        // 页面加载完成后执行
         document.addEventListener('DOMContentLoaded', function() {
             // 更新页脚年份
             document.getElementById('currentYear').textContent = new Date().getFullYear();
@@ -524,7 +713,6 @@
                         : '<i class="fas fa-bars"></i>';
                 });
                 
-                // 点击菜单项后关闭菜单
                 document.querySelectorAll('.nav-menu a').forEach(link => {
                     link.addEventListener('click', () => {
                         navMenu.classList.remove('active');
@@ -533,21 +721,61 @@
                 });
             }
             
-            // 导航栏滚动效果
-            window.addEventListener('scroll', function() {
-                const navbar = document.querySelector('.navbar');
-                if (navbar) {
-                    if (window.scrollY > 50) {
-                        navbar.style.background = 'rgba(10, 10, 10, 0.95)';
-                        navbar.style.backdropFilter = 'blur(15px)';
-                    } else {
-                        navbar.style.background = 'rgba(10, 10, 10, 0.95)';
-                        navbar.style.backdropFilter = 'blur(15px)';
+            // 分类导航点击事件
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            const caseSections = document.querySelectorAll('.case-section');
+            
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // 移除所有按钮的active类
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    // 为当前点击按钮添加active类
+                    btn.classList.add('active');
+                    
+                    // 获取目标section的id
+                    const targetId = btn.getAttribute('data-target');
+                    const targetSection = document.getElementById(targetId);
+                    
+                    if (targetSection) {
+                        // 滚动到目标section
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
                     }
+                });
+            });
+            
+            // 滚动时更新活动分类
+            window.addEventListener('scroll', () => {
+                let current = '';
+                
+                caseSections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (scrollY >= (sectionTop - 150)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                if (current) {
+                    categoryBtns.forEach(btn => {
+                        btn.classList.remove('active');
+                        if (btn.getAttribute('data-target') === current) {
+                            btn.classList.add('active');
+                        }
+                    });
                 }
             });
             
-            console.log('案例展示页面加载完成');
+            // 导航栏滚动效果
+            window.addEventListener('scroll', function() {
+                const navbar = document.querySelector('.navbar');
+                if (navbar && window.scrollY > 50) {
+                    navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+                }
+            });
         });
     </script>
 </body>
