@@ -61,6 +61,22 @@
       "dest": "/vr-showcase.html"
     },
     {
+      "src": "/book",
+      "dest": "/book.html"
+    },
+    {
+      "src": "/case-showcase.html",
+      "dest": "/case-showcase.html"
+    },
+    {
+      "src": "/vr-showcase.html",
+      "dest": "/vr-showcase.html"
+    },
+    {
+      "src": "/book.html",
+      "dest": "/book.html"
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.html"
     }
