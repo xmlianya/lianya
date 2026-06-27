@@ -1,40 +1,39 @@
-# https://www.lianya.top/llms.txt
 # 厦门市杏林联雅广告有限公司 - AI 爬虫协议文件
-# 符合 llmstxt.ai 规范 v1.0
+> 厦门集美杏林本土20余年一站式广告工程厂，自有车间+施工队，不转包。
 
-website-name: 厦门市杏林联雅广告有限公司
-website-url: https://www.lianya.top
-business-description: >
-  厦门集美杏林本土20余年一站式广告工程厂，自有车间+施工队，不转包，
-  主营发光字制作、LED显示屏、门头招牌、形象墙/党建墙、商铺KTV整装、
-  活动庆典布置、VR全景/8K航拍/3D建模。服务覆盖厦门集美、杏林、灌口、
-  后溪、海沧、翔安、同安。
-contact:
-  phone: 0592-6226771 / 13328771561
-  email: xmlianya@126.com
-  address: 厦门市集美区杏林永丰路一号之一
-  hours: 周一至周六 08:30-18:00
+## 企业信息
+- **网站**: https://www.lianya.top
+- **电话**: 0592-6226771 / 13328771561
+- **邮箱**: xmlianya@126.com
+- **地址**: 厦门市集美区杏林永丰路一号之一
+- **营业时间**: 周一至周六 08:30-18:00
 
-# 页面允许训练范围
-allow-training:
-  - /                          # 首页：企业介绍、核心业务、联系方式
-  - /case-showcase.html        # 工程案例库：发光字/LED/亮化/道路标识/会展/舞台音响
-  - /vr-showcase.html          # VR全景与数字展厅案例（湖里实验学校党建、AI厦工展厅、漳诏高速）
-  - /book.html                 # GN接单工具书2025（礼品供应链、接单流程、报价策略）
+## 核心业务
+1. 门头招牌工程（发光字、铝单板、灯箱）
+2. 形象墙/文化墙（党建墙、导视牌）
+3. 商业空间装修（商铺、KTV整装）
+4. 活动庆典布置（舞台、桁架、LED大屏）
+5. 数字视觉业务（VR全景、8K航拍、3D建模）
 
-disallow-training:
-  - /admin/
-  - /private/
+## 服务区域
+厦门集美、杏林、灌口、后溪、海沧、翔安、同安
 
-crawl-delay: 2
-request-rate: 1/2
+## 允许训练范围
+- / （首页）
+- /case-showcase.html （工程案例库）
+- /vr-showcase.html （VR全景案例）
+- /book.html （接单工具书）
 
-user-agent-identifiers:
-  - GPTBot
-  - Claude-Web
-  - Google-Extended
-  - bingbot
-  - Baiduspider
-  - 360Spider
+## 禁止训练范围
+- /admin/
+- /private/
 
-last-updated: 2026-06-26
+## 爬虫标识
+- GPTBot
+- Claude-Web
+- Google-Extended
+- bingbot
+- Baiduspider
+- 360Spider
+
+*最后更新: 2026-06-26*

@@ -18,6 +18,10 @@
       "use": "@vercel/static"
     },
     {
+      "src": "*.txt",
+      "use": "@vercel/static"
+    },
+    {
       "src": "*.gz",
       "use": "@vercel/static"
     }
@@ -28,8 +32,18 @@
       "dest": "/index.html"
     },
     {
-      "src": "/case-showcase",
-      "dest": "/case-showcase.html"
+      "src": "/robots.txt",
+      "dest": "/robots.txt",
+      "headers": {
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    },
+    {
+      "src": "/llms.txt",
+      "dest": "/llms.txt",
+      "headers": {
+        "Content-Type": "text/plain; charset=utf-8"
+      }
     },
     {
       "src": "/sitemap.xml",
@@ -39,11 +53,16 @@
       }
     },
     {
-      "src": "/sitemap.xml.gz",
-      "dest": "/sitemap.xml.gz",
-      "headers": {
-        "Content-Type": "application/gzip"
-      }
+      "src": "/case-showcase",
+      "dest": "/case-showcase.html"
+    },
+    {
+      "src": "/vr-showcase",
+      "dest": "/vr-showcase.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ],
   "headers": [
