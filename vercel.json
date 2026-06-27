@@ -6,11 +6,27 @@
       "use": "@vercel/static"
     },
     {
+      "src": "*.js",
+      "use": "@vercel/static"
+    },
+    {
       "src": "*.css",
       "use": "@vercel/static"
     },
     {
-      "src": "*.js",
+      "src": "*.png",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.jpg",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.gif",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.ico",
       "use": "@vercel/static"
     },
     {
@@ -32,68 +48,12 @@
       "dest": "/index.html"
     },
     {
-      "src": "/robots.txt",
-      "dest": "/robots.txt",
-      "headers": {
-        "Content-Type": "text/plain; charset=utf-8"
-      }
-    },
-    {
-      "src": "/llms.txt",
-      "dest": "/llms.txt",
-      "headers": {
-        "Content-Type": "text/plain; charset=utf-8"
-      }
-    },
-    {
-      "src": "/sitemap.xml",
-      "dest": "/sitemap.xml",
-      "headers": {
-        "Content-Type": "application/xml; charset=utf-8"
-      }
-    },
-    {
-      "src": "/case-showcase",
-      "dest": "/case-showcase.html"
-    },
-    {
-      "src": "/vr-showcase",
-      "dest": "/vr-showcase.html"
-    },
-    {
-      "src": "/book",
-      "dest": "/book.html"
-    },
-    {
-      "src": "/case-showcase.html",
-      "dest": "/case-showcase.html"
-    },
-    {
-      "src": "/vr-showcase.html",
-      "dest": "/vr-showcase.html"
-    },
-    {
-      "src": "/book.html",
-      "dest": "/book.html"
+      "src": "/404",
+      "dest": "/404.html"
     },
     {
       "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        }
-      ]
+      "dest": "/$1.html"
     }
   ]
 }
