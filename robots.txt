@@ -1,7 +1,7 @@
 # https://www.lianya.top/robots.txt
 # 厦门市杏林联雅广告有限公司 - 网站爬虫协议
 # 最后更新: 2026-06-26
-# 策略：保收录 + 迎AI搜索 + 拒AI训练
+# 策略：保收录 + 迎AI搜索 + 拒AI训练（仅拦GPTBot/Google-Extended/Bytespider/CCBot）
 
 # === 1. 重点优化：中国大陆主流搜索引擎（侧重收录）===
 User-agent: Baiduspider
@@ -48,6 +48,12 @@ Disallow: /admin/
 Disallow: /private/
 Crawl-delay: 2
 
+User-agent: ClaudeBot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Crawl-delay: 2
+
 User-agent: PerplexityBot
 Allow: /
 Disallow: /admin/
@@ -56,9 +62,6 @@ Crawl-delay: 2
 
 # === 4. AI 训练爬虫（拦截，保护内容不被喂模型）===
 User-agent: GPTBot
-Disallow: /
-
-User-agent: ClaudeBot
 Disallow: /
 
 User-agent: Google-Extended
